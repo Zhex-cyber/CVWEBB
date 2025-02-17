@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Saya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="profile-pic">
+                <img src="images/Test.jpg" alt="Foto Profil">
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navbar">
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li class="dropdown">
+                    <a href="#">Kontak <span>&#9662;</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#email">Email</a></li>
+                        <li><a href="#phone">Telepon</a></li>
+                        <li><a href="#address">Alamat</a></li>
+                    </ul>
+                </li>
+                <li><button onclick="printCV()">Print CV</button></li> <!-- Tombol Print CV -->
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <h1>Hikais Dika Darma Putra</h1>
+                <p>Web Developer</p>
+            </header>
+            <section id="about">
+                <h2>Tentang Saya</h2>
+                <div class="about-pic">
+                    <img src="images/Test.jpg" alt="Tentang Saya Foto">
+                </div>
+                <p>Saya sudah berdedikasi dengan pengalaman di bidang pengembangan perangkat lunak, saya memiliki keahlian di bidang Design UI/UX dalam pengembangan Web. Saya terampil dalam menggunakan berbagai teknologi terkini seperti HTML (Hypertext Markup Language) ,PHP (Hypertext Processor), Canva, Figma, uizard, serta  memiliki pengalaman dalam membuat suatu website</p>
+            </section>
+            <section id="experience">
+                <h2>Pengalaman</h2>
+                <div class="experience-card">
+                    <h3>Nama Perusahaan</h3>
+                    <img src="images/Test.jpg" alt="Experience 1">
+                    <p class="position">Jabatan - Tanggal</p>
+                    <p class="description">Deskripsi tugas dan tanggung jawab.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Nama Perusahaan</h3>
+                    <img src="images/Test.jpg" alt="Experience 2">
+                    <p class="position">Jabatan - Tanggal</p>
+                    <p class="description">Deskripsi tugas dan tanggung jawab.</p>
+                </div>
+                <!-- Tambahkan lebih banyak kartu pengalaman sesuai kebutuhan -->
+            </section>
+            <section id="education">
+                <h2>Pendidikan</h2>
+                <div class="education-card">
+                    <h3>Nama Institusi</h3>
+                    <img src="images/Test.jpg" alt="Education 1">
+                    <p>Gelar - Tanggal</p>
+                    <p>Deskripsi singkat tentang program studi.</p>
+                </div>
+                <div class="education-card">
+                    <h3>Nama Institusi</h3>
+                    <img src="images/Test.jpg" alt="Education 2">
+                    <p>Gelar - Tanggal</p>
+                    <p>Deskripsi singkat tentang program studi.</p>
+                </div>
+                <!-- Tambahkan lebih banyak kartu pendidikan sesuai kebutuhan -->
+            </section>
+            <section id="skills">
+                <h2>Kemampuan</h2>
+                <div class="skills-container">
+                    <div class="skill">
+                        <h3>Mahir</h3>
+                        <ul>
+                        <li>Menggunakan Microsoft Office ( Word, Excell, PPT )</li>
+                        <li>Menggunakan Canva, Uizard, ChatGPT</li>
+                    </ul>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Menengah</h3>
+                            <ul>
+                                <li>Membuat Tampilan UI/UX </li>
+                                <li>Menggunakan Bahasa pemrograman PHP</li>
+                            </ul>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 55%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Pemula</h3>
+                        <ul>
+                            <li>Menjadi seorang PM ( project manager )</li>
+                            <li>Menggunakan Laravel</li>
+                        </ul>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Kontak</h2>
+                <div class="contact-info">
+                    <p id="email"><strong>Email:</strong> email@example.com</p>
+                    <p id="phone"><strong>Telepon:</strong> 0123-4567-890</p>
+                    <p id="address"><strong>Alamat:</strong> Alamat lengkap Anda</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nama Anda. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function printCV() {
+            window.print();
+        }
+
+        function toggleMenu() {
+            var navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'block') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

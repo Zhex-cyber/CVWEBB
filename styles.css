@@ -1,0 +1,256 @@
+/* Reset dan default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #333; /* Warna latar belakang yang gelap */
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden; /* Hindari horizontal scroll */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background: linear-gradient(to bottom, #404040, #404040); /* Gradient hijau lebih cerah */
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: height 0.3s;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    #navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    #navbar li {
+        text-align: center;
+        margin: 15px 0;
+    }
+}
+
+.profile-pic {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #005d4b;
+}
+
+nav ul li button {
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 25px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+nav ul li button:hover {
+    background: #005d4b;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00796b;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #004d40;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    margin-top: 100px; /* Perbarui jika tinggi navbar berubah */
+    padding: 20px;
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #00c853;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    color: #00796b;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background: #444; /* Latar belakang section lebih gelap */
+    color: #fff; /* Warna teks putih untuk kontras */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-pic img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #00c853;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card,
+.education-card {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #555; /* Warna latar belakang kartu yang lebih gelap */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.experience-card img,
+.education-card img {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00c853;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.progress {
+    background: #00c853;
+    height: 20px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #444; /* Warna latar belakang footer yang lebih gelap */
+    border-top: 1px solid #555;
+    color: #fff; /* Warna teks putih untuk kontras */
+}
+
+
+
